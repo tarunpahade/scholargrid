@@ -22,7 +22,7 @@ export default function CodeEditor({ isDark }) {
     <>
       <div className="container mt-4">
         <h3 className="text-center">Online Code Editor by Basant</h3>
-        <div className="row w-100">
+        <div className="row">
           <div className="col col1 border me-4 w-60">
             <LanguageSelector language={language} onSelect={onSelect} />
             <div className="container editorbox">
@@ -31,7 +31,7 @@ export default function CodeEditor({ isDark }) {
                 height="77vh"
                 language={language}
                 defaultValue={CODE_SNIPPETS[language]}
-                theme={isDark ? "" : "vs-dark"}
+                theme={isDark ? "vs-dark" : ""}
                 value={value}
                 onChange={(vlaue) => setValue(value)}
                 onMount={onMount}

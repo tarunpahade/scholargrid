@@ -6,7 +6,7 @@ import CodeEditor from "./Components/CodeEditor";
 import Navbar from "./Components/Navbar";
 
 function App() {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(true);
 
   const darkMode = () => {
     toggleHandler();

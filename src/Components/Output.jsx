@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { executeCode } from "./api";
 
-export default function Output({ editorRef, language, isDark }) {
+export default function Output({ editorRef, language }) {
   const [output, setOutput] = useState(null);
   const [isError, setIsError] = useState(false);
   const [isLoader, setIsLoader] = useState(false);
@@ -16,6 +16,7 @@ export default function Output({ editorRef, language, isDark }) {
       const result = await executeCode(language, sourceCode);
       setOutput(result.run.output.split("\n"));
       result.run.stderr ? setIsError(true) : setIsError(false);
+      console.log("Error" + isError);
     } catch (error) {
       console.log(error);
     } finally {
@@ -40,8 +41,10 @@ export default function Output({ editorRef, language, isDark }) {
         </button>
 
         <div
-          className={`contaienr p-2 ${isDark ? "text-dark" : "text-light"}`}
-          style={{ color: isError ? "red" : "white" }}
+          className={`outputResult contaienr p-2 ${
+            isError ? "text-danger" : ""
+          }`}
+          // style={{ color: isError ? "red !important" : "white" }}
         >
           {output
             ? output.map((line, i) => <p key={i}>{line}</p>)

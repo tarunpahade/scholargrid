@@ -1,10 +1,13 @@
 @media only screen and (max-width: 995px) {
   .editor {
-    height: 60vh;
+    height: 62vh;
     margin-left: 0px;
   }
   .editorbox {
     height: 65vh;
+  }
+  .col1 {
+    margin-bottom: 4px;
   }
   .row .col {
     height: auto;
@@ -21,20 +24,22 @@
   left: 75%;
 }
 
-.output {
-  min-height: 45vh;
-}
+/* .output {
+  max-height: 77vh;
+} */
 
 .editor {
   margin-bottom: 4px;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 .editorbox {
   width: 100%;
 }
 .col1 {
-  min-width: 70%;
+  min-width: 60%;
 }
-
-DarkModeIcon {
-  font-size: 20px;
+.outputResult {
+  max-height: 76vh;
+  overflow: auto;
 }

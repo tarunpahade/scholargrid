@@ -7,13 +7,13 @@ export default function Navbar({ darkMode, isDark }) {
     <>
       <nav
         className={`navbar navbar-expand-lg navbar-light bg-${
-          isDark ? "light" : "dark"
+          isDark ? "dark" : "light"
         }`}
       >
         <div className="container-fluid">
           <a className="navbar-brand ">
             <h3
-              className={`text-${isDark ? "dark" : "light"} fs-2 fw-bold mx-4`}
+              className={`text-${isDark ? "light" : "dark"} fs-2 fw-bold mx-4`}
             >
               CodeEditor
             </h3>
@@ -36,9 +36,9 @@ export default function Navbar({ darkMode, isDark }) {
             <div className=" nameItem">
               <div className="mx-4">
                 {isDark ? (
-                  <DarkModeIcon onClick={darkMode} />
-                ) : (
                   <LightModeIcon onClick={darkMode} />
+                ) : (
+                  <DarkModeIcon onClick={darkMode} />
                 )}
               </div>
             </div>
