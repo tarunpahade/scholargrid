@@ -1,0 +1,40 @@
+@media only screen and (max-width: 995px) {
+  .editor {
+    height: 60vh;
+    margin-left: 0px;
+  }
+  .editorbox {
+    height: 65vh;
+  }
+  .row .col {
+    height: auto;
+  }
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 75%;
+}
+
+.output {
+  min-height: 45vh;
+}
+
+.editor {
+  margin-bottom: 4px;
+}
+.editorbox {
+  width: 100%;
+}
+.col1 {
+  min-width: 70%;
+}
+
+DarkModeIcon {
+  font-size: 20px;
+}
