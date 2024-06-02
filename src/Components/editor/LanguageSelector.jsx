@@ -1,4 +1,4 @@
-import React, { version } from "react";
+/* eslint-disable react/prop-types */
 import { LANGUAGE_VERSIONS } from "./constant";
 
 const languages = Object.entries(LANGUAGE_VERSIONS);

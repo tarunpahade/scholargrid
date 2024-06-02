@@ -1,7 +1,7 @@
-import React, { useState } from "react";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 
+// eslint-disable-next-line react/prop-types
 export default function Navbar({ darkMode, isDark }) {
   return (
     <>
@@ -15,7 +15,7 @@ export default function Navbar({ darkMode, isDark }) {
             <h3
               className={`text-${isDark ? "light" : "dark"} fs-2 fw-bold mx-4`}
             >
-              CodeEditor
+              ScholarGrid
             </h3>
           </a>
           <button

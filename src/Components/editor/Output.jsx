@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-import { executeCode } from "./api";
+/* eslint-disable react/prop-types */
+import  { useState } from "react";
+import { executeCode } from "../api";
 
 export default function Output({ editorRef, language }) {
   const [output, setOutput] = useState(null);
