@@ -7,8 +7,6 @@ import CodeEditor from "./Components/editor/CodeEditor";
 import Navbar from "./Components/Navbar";
 import Home from "./Components/home/Home"; // Import your Home component
 import Login from "./Components/login1/Login2";
-import Teacher from "./Components/teacher/teacher";
-// import About from "./Components/About"; // Import your About component
 
 function App() {
   const [isDark, setIsDark] = useState(true);
@@ -22,6 +20,12 @@ function App() {
   return (
     <>
       <Routes>
+      <Route path="/editor" element={
+                    <>
+                    <Navbar darkMode={darkMode} isDark={isDark} />
+        <CodeEditor isDark={isDark} />
+        </>
+        } />
         <Route
           path="/"
           element={
@@ -30,14 +34,8 @@ function App() {
 
           }
         />{" "}
-        <Route path="/editor" element={
-                    <>
-                    <Navbar darkMode={darkMode} isDark={isDark} />
-        <CodeEditor isDark={isDark} />
-        </>
-        } />
+     
         <Route path="/login" element={<Login />} />
-        <Route path="/teacher" element={<Teacher />} />
       </Routes>
     </>
   );
